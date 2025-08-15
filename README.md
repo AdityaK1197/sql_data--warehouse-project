@@ -7,13 +7,18 @@ Find datawarehouse structrue here > https://drive.google.com/file/d/1JrcRmgOqJPL
 
 
 USE Master;
+
 CREATE DATABASE Datawarehouse;
+
 USE Datawarehouse; 
 GO
+
 CREATE Schema bronze;
 GO
+
 CREATE Schema silver;
 Go
+
 CREATE Schema gold;
 
 
