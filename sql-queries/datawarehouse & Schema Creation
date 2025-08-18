@@ -1,0 +1,24 @@
+
+💻 We will create a database and following schemas: Bronze, Silver & Gold where all data will be stored in tables 
+on truncate & load all basis.
+
+------------------------------------------------------------------------------------------------------------------
+
+USE master;
+GO
+CREATE DATABASE datawarehouse;
+GO
+CREATE SCHEMA bronze;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
