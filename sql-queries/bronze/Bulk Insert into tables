@@ -25,7 +25,7 @@
 ---Step 3 - Make sure that column names in CSV file is matching with column names
 
 		BULK INSERT bronze.crm_cust_info
-		FROM 'C:\Users\adityakadam\OneDrive - PRABHUDAS LILLADHER PVT. LTD\Documents\Data Warehousing Project\Source_CRM\cust_info.csv'
+		FROM 'Enter Path'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR =',',
@@ -58,7 +58,7 @@ IF OBJECT_ID ('bronze.crm_prd_info','U') IS NOT NULL
 ---Step 3 - Make sure that column names in CSV file is matching with column names
 
 		BULK INSERT bronze.crm_prd_info
-		FROM 'C:\Users\adityakadam\OneDrive - PRABHUDAS LILLADHER PVT. LTD\Documents\Data Warehousing Project\Source_CRM\prd_info.csv'
+		FROM 'Enter Path'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR =',',
@@ -92,7 +92,7 @@ IF OBJECT_ID ('bronze.crm_sales_details','U') IS NOT NULL
 ---Step 3 - Make sure that column names in CSV file is matching with column names
 
 		BULK INSERT bronze.crm_sales_details
-		FROM 'C:\Users\adityakadam\OneDrive - PRABHUDAS LILLADHER PVT. LTD\Documents\Data Warehousing Project\Source_CRM\sales_details.csv'
+		FROM 'Enter Path'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR =',',
@@ -120,7 +120,7 @@ IF OBJECT_ID ('bronze.crm_sales_details','U') IS NOT NULL
 ---Step 3 - Make sure that column names in CSV file is matching with column names
 
 		BULK INSERT bronze.erp_cust_az12
-		FROM 'C:\Users\adityakadam\OneDrive - PRABHUDAS LILLADHER PVT. LTD\Documents\Data Warehousing Project\Source_ERP\CUST_AZ12.csv'
+		FROM 'Enter Path'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR =',',
@@ -147,7 +147,7 @@ IF OBJECT_ID ('bronze.erp_loc_a101','U') IS NOT NULL
 ---Step 3 - Make sure that column names in CSV file is matching with column names
 
 		BULK INSERT bronze.erp_loc_a101
-		FROM 'C:\Users\adityakadam\OneDrive - PRABHUDAS LILLADHER PVT. LTD\Documents\Data Warehousing Project\Source_ERP\loc_a101.csv'
+		FROM 'Enter Path'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR =',',
@@ -175,7 +175,7 @@ IF OBJECT_ID ('bronze.erp_loc_a101','U') IS NOT NULL
 ---Step 3 - Make sure that column names in CSV file is matching with column names
 
 		BULK INSERT bronze.erp_px_cat_g1v2
-		FROM 'C:\Users\adityakadam\OneDrive - PRABHUDAS LILLADHER PVT. LTD\Documents\Data Warehousing Project\Source_ERP\px_cat_g1v2.csv'
+		FROM 'Enter Path'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR =',',
