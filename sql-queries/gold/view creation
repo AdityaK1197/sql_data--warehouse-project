@@ -1,0 +1,4 @@
+----1) Bronze layer is extracting all the data from csv files into respective tables
+----2) silver layer is transforing data and loading into tables of silver layer.
+----3) Gold layer is focusing on refining and modeling data so it can be used by analyst, data scientist & BI
+
