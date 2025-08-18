@@ -2,6 +2,8 @@
 ----2) silver layer is transforing data and loading into tables of silver layer.
 ----3) Gold layer is focusing on refining and modeling data so it can be used by analyst, data scientist & BI
 
+========================================================================================================================
+
 CREATE VIEW gold.dim_customers As
 select
 ROW_NUMBER() over (order by ci.cst_id) customer_key,
@@ -22,6 +24,7 @@ LEFT JOIN silver.erp_cust_az12 ca
 LEFT JOIN silver.erp_loc_a101 la 
 		on ci.cst_key  = la.cid
 
+========================================================================================================================
 
 CREATE VIEW gold.dim_products As
 SELECT 
@@ -40,3 +43,22 @@ FROM silver.crm_prd_info pn
 LEFT JOIN silver.erp_px_cat_g1v2 pc 
 		on pn.cat_id = pc.id
 WHERE pn.prd_end_dt IS NULL   --------Filter out all historical data
+
+========================================================================================================================
+
+CREATE VIEW gold.fact_sales as
+SELECT 
+sls_ord_num As order_number,
+dp.product_key,
+dc.customer_key,
+sls_order_dt As order_date,
+sls_ship_dt As shipping_date,
+sls_due_dt as due_date,
+sls_sales As sales,
+sls_quantity As quantity,
+sls_price as price
+from silver.crm_sales_details sd
+LEFT JOIN gold.dim_customers dc 
+	  on	sd.sls_cust_id = dc.customer_id
+LEFT JOIN gold.dim_products dp 
+	on	 sd.sls_prd_key = dp.product_number
