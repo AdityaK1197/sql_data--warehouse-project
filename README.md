@@ -8,7 +8,7 @@ Designed as a portfolio project, it highlights industry best practices in data e
 ------------------------------------------------------------------------------------------------------------------------
 # Data Architecture
 
-![my image] (https://github.com/AdityaK1197/sql_data--warehouse-project/blob/main/img/1_Data%20Warehouse%20Structure.jpg)  
+![my image]()
 
 1) Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 2) Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
@@ -25,7 +25,7 @@ Analytics & Reporting: Creating SQL-based reports and dashboards for actionable 
 
 # Project Requirements 🚀 
 
-# Building the Data Warehouse (Data Engineering)
+Building the Data Warehouse (Data Engineering)
 
 # Objective
 
