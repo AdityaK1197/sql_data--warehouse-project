@@ -1,24 +1,12 @@
-# sql_data--warehouse-project
-Building a modern data warehouse with SQL server, including ETL processes, data modeling, and analytics
+# Data Warehouse and Analytics Project
 
-step 1 - As diffined in data warehouse structrue design, we will create Bronze, Silver, Gold schemas
+Welcome to the Data Warehouse and Analytics Project repository! 🚀
 
-Find datawarehouse structrue here > https://drive.google.com/file/d/1JrcRmgOqJPLmMOpDALb1c_RN-GNuw2P0/view?usp=sharing
+This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. 
+Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
 
+------------------------------------------------------------------------------------------------------------------------
+# Data Architecture
 
-USE Master;
-
-CREATE DATABASE Datawarehouse;
-
-USE Datawarehouse; 
-GO
-
-CREATE Schema bronze;
-GO
-
-CREATE Schema silver;
-Go
-
-CREATE Schema gold;
 
 
