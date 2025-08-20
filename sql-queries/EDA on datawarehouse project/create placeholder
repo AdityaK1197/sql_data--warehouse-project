@@ -1,0 +1,104 @@
+Will solve the business problems by doing Exploratory Data Analysis on Data warehousing Project
+
+===================================================================================================
+Step 1
+===================================================================================================
+
+I) Database Exploration
+
+select * from INFORMATION_SCHEMA.TABLES ---- To know the tables in database
+
+select * from INFORMATION_SCHEMA.COLUMNS ---- To know the columns present in tables of database
+
+select * from INFORMATION_SCHEMA.VIEWS ---- To know the table views
+
+===================================================================================================
+Step 2
+===================================================================================================
+
+II) Dimension Exploaration
+
+Explore all countries our customers come from
+
+select 
+DISTINCT
+country
+FROM gold.dim_customers
+order by 1
+
+Explore all Categories, subcategories & product names
+
+select 
+DISTINCT
+category,
+subcategory,
+product_name
+FROM gold.dim_products
+order by 1,2;
+
+===================================================================================================
+Step 3
+===================================================================================================
+
+III) Date Range Exploaration
+
+
+----Let's understand Age demographs of customers----
+
+select
+MAX(birthdate) As 'Youngest Customer',
+DATEDIFF(YEAR,MAX(birthdate),GETDATE()) As 'Youngest Customer Age',
+MIN(birthdate) As 'Oldest Customer Age',
+DATEDIFF(YEAR,MIN(birthdate),GETDATE()) As 'Oldest Customer Age'
+From gold.dim_customers 
+
+----Let's check when the first and last order was placed----
+
+SELECT
+CASt(MIN(order_date) As DATETIME2)  'First Order Date & Time',
+CASt(MAX(order_date) As DATETIME2)  'Last Order Date & Time',
+DATEDIFF(MONTH,MIN(order_date),MAX(order_date)) As 'Business Tenure in Months'
+FROM gold.fact_sales
+
+===================================================================================================
+Step 4
+===================================================================================================
+
+IV) Exploring the business Measures
+
+-------- Lets calculate total Sales -------
+
+---------How many orders were placed--------
+select 
+DISTINCT
+COUNT(order_number) as 'Order Count'
+from gold.fact_sales
+
+----------How many qty were sold---------------
+
+select 
+SUM(quantity) as 'Quantity Sold'
+from gold.fact_sales
+
+-----------what is the Avg cost of products---------
+select 
+AVG(price) as 'Avg Price'
+from gold.fact_sales
+
+---------How Many Products we have-------------
+
+select 
+DISTINCT
+COUNT(product_key) as 'product Count'
+from gold.dim_products
+
+--------How many customer we have---------
+
+select 
+DISTINCT
+COUNT(customer_key) as 'Customer Count'
+from gold.dim_customers
+
+
+
+
