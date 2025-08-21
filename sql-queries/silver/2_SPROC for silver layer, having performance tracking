@@ -170,7 +170,7 @@ BEGIN
 				sls_quantity,
 				--sls_price as old_sls_price,
 				CASE 
-				WHEN sls_sales IS NOT NULL or sls_sales <=0 or sls_sales != sls_quantity * ABS (sls_price)
+				WHEN sls_sales IS NULL or sls_sales <=0 or sls_sales != sls_quantity * ABS (sls_price)
 				THEN sls_quantity * ABS(sls_price)
 				ELSE sls_sales END AS sls_sales,
 				CASE
